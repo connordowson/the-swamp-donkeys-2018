@@ -1,0 +1,30 @@
+body{
+    background-color: #222;
+}
+
+#home-wrapper{
+    padding: 20px;
+
+}
+
+#home-news{
+    background-color: whitesmoke;
+    padding: 20px;
+    width: 500px;
+    font-family: $text-font;
+    margin: 0 auto;
+
+    .home-news-title{
+        
+        a{
+            color: #222;
+        }
+    }
+
+    .home-news-date{
+        
+        color: #555;
+        font-style: italic;
+    }
+
+}

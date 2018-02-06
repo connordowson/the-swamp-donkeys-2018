@@ -1,3 +1,5 @@
 baseURL = "http://www.theswampdonkeys.com/"
 languageCode = "en-us"
 title = "The Swamp Donkeys"
+staticDir = ["static"]
+uglyurls = false
