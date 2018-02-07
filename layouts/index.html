@@ -16,59 +16,134 @@
 
     <div id="home-wrapper">
 
-        {{.Content}}
+        <div id="matches-wrapper">
 
-        {{ range first 1 .Data.Pages }}
-    
-        <div id="home-main-news">
+            <!-- Gets upcoming matches from json file -->
+            <div id="matches">
 
+                <h2> Upcoming matches: </h2>
 
-            <img {{ with .Params.imageurl }} src="/assets/{{ . }}" {{ end }} />
+                {{.Content}}
+                    
+                {{ range last 3 .Site.Data.upcoming_matches }}
 
-            <div class="home-news-title">
-                <h2> <a href="{{ .URL }}">{{.Title}} </a> </h2>
-            </div>
+                <div class="match">
 
-            <a class="home-news-date"> {{ dateFormat "Monday, Jan 2, 2006" .Date }} </a>
+                    <a class="game-logo"> <img src="/assets/logos/{{ .team }}.svg"/> </a>
+                    
+                    <a class="upcoming-fixture"> <img src="/assets/logos/tsd_logo.svg"/> <a> TSD vs {{ .opponent }} </a> <img src="/assets/logos/{{ .opponent }}_logo.svg"/> </a>
+                    
+                    <a class="fixture-date"> {{ .date }}  </a>
 
-            <div> {{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-            <div> {{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-            <div> {{ if .Params.moods }}<strong>Moods:</strong> {{range .Params.moods}}<a href="{{ "/moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-                
-            <p>{{ slicestr .Summary 0 130 }}...</p>
-
-            <a href="{{ .URL }}"> Read More </a>
-
-        </div>
-        
-        {{ .Render "test"}}
-
-        {{ end }}
-
-        <div id="home-secondary-news">
-
-        {{.Content}}
-
-        {{ range first 4 (after 1 .Data.Pages) }}
-
-            <div class="secondary-news-item">
-        
-                <div class="secondary-news-title">
-                    <h2> <a href="{{.URL}}">{{.Title}} </a> </h2>
                 </div>
 
-                <div class="secondary-news-date"> <a> {{ dateFormat "Jan 2 2006" .Date }}</a></div>
-<!-- 
+                {{ end }}
+                    
+            </div>
+
+            <!-- Gets recent matches from json file -->
+            <div id="recent-matches">
+
+                    <h2> Recent matches: </h2>
+    
+                    {{.Content}}
+                        
+                    {{ range last 3 .Site.Data.recent_matches }}
+
+                    {{ $result := .result }}
+    
+                    <div class="match">
+    
+                        <a class="game-logo"> <img src="/assets/logos/{{ .team }}.svg"/> </a>
+                        
+                        <a class="fixture"> <img src="/assets/logos/tsd_logo.svg"/> 
+                            
+                        <a class="result">  
+
+                            TSD {{ .score }} {{ .opponent }} 
+                        
+                        </a>
+                        
+                        <img src="/assets/logos/{{ .opponent }}_logo.svg"/> </a>
+                        
+                        <a class="fixture-date"> {{ .date }}  </a>
+    
+                    </div>
+    
+                    {{ end }}
+                        
+                </div>
+
+        </div>
+
+        <!-- Shows first story as main feature -->
+
+        <div id="news-wrapper">
+
+            {{.Content}}
+
+            {{ range first 1 .Data.Pages }}
+
+            <div id="home-main-news">
+
+
+                <img {{ with .Params.imageurl }} src="/assets/{{ . }}" {{ end }} />
+
+                <div class="home-news-title">
+                    <h2> <a href="{{ .URL }}">{{.Title}} </a> </h2>
+                </div>
+
+                <a class="home-news-date"> {{ dateFormat "Monday, Jan 2, 2006" .Date }} </a>
+
                 <div> {{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
                 <div> {{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
                 <div> {{ if .Params.moods }}<strong>Moods:</strong> {{range .Params.moods}}<a href="{{ "/moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+                    
+                <p>{{ slicestr .Summary 0 130 }}...</p>
 
-                
-                <p>{{.Summary}}</p> -->
+                <a href="{{ .URL }}"> Read More </a>
 
             </div>
             
-        {{ end }}
+            {{ .Render "test"}}
+
+            {{ end }}
+
+            <div id="home-secondary-news">
+
+            {{.Content}}
+
+            {{ range first 4 (after 1 .Data.Pages) }}
+
+                <div class="secondary-news-item">
+            
+                    <div class="secondary-news-title">
+                        <h2> <a href="{{.URL}}">{{.Title}} </a> </h2>
+                    </div>
+
+                    <div class="secondary-news-date"> <a> {{ dateFormat "Jan 2 2006" .Date }}</a></div>
+    <!-- 
+                    <div> {{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+                    <div> {{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+                    <div> {{ if .Params.moods }}<strong>Moods:</strong> {{range .Params.moods}}<a href="{{ "/moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+
+                    
+                    <p>{{.Summary}}</p> -->
+
+                </div>
+                
+            {{ end }}
+
+            </div>
+
+            
+        </div>
+
+        <!--  next column -->
+
+        <div id="wrapper">
+
+            <a width="500px" class="twitter-timeline" href="https://twitter.com/connagon?ref_src=twsrc%5Etfw">Tweets by connagon</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
         </div>
 

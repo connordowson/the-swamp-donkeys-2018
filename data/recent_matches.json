@@ -1,0 +1,27 @@
+[
+
+    {
+        "team": "DOTA 2",
+        "opponent": "FNATIC",
+        "score": "2:1",
+        "result": "win",
+        "date": "Feb 7 2017"
+    },
+
+    {
+        "team": "CSGO",
+        "opponent": "FNATIC",
+        "score": "1:3",
+        "result": "loss",
+        "date": "Feb 7 2017"
+    },
+
+    {
+        "team": "DOTA 2",
+        "opponent": "FNATIC",
+        "score": "2:1",
+        "result": "win",
+        "date": "Feb 7 2017"
+    }
+
+]

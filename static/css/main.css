@@ -59,13 +59,16 @@ body {
 #home-wrapper {
   font-family: "Open Sans", sans-serif;
   padding: 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around; }
   #home-wrapper a {
     color: #222; }
   #home-wrapper #home-main-news {
     background-color: #d2f9dd;
     padding: 10px;
-    width: 500px;
+    width: 700px;
+    flex-grow: 1;
     margin: 0 auto;
     margin-bottom: 20px; }
     #home-wrapper #home-main-news img {
@@ -80,7 +83,7 @@ body {
   #home-wrapper #home-secondary-news .secondary-news-item {
     background-color: #d2f9dd;
     padding: 10px;
-    width: 500px;
+    width: 700px;
     margin: 0 auto;
     margin-bottom: 20px;
     display: flex;
@@ -91,5 +94,38 @@ body {
     #home-wrapper #home-secondary-news .secondary-news-item .secondary-news-date {
       text-align: right;
       min-width: 100px; }
+
+#matches-wrapper {
+  width: 500px; }
+  #matches-wrapper #matches, #matches-wrapper #recent-matches {
+    background-color: #d2f9dd;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px; }
+    #matches-wrapper #matches h2, #matches-wrapper #recent-matches h2 {
+      text-transform: uppercase; }
+    #matches-wrapper #matches .win, #matches-wrapper #recent-matches .win {
+      background-color: #4CAF50; }
+    #matches-wrapper #matches .loss, #matches-wrapper #recent-matches .loss {
+      background-color: #E53935; }
+    #matches-wrapper #matches .match:nth-child(odd), #matches-wrapper #recent-matches .match:nth-child(odd) {
+      background-color: #62DD8B; }
+    #matches-wrapper #matches .match, #matches-wrapper #recent-matches .match {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      #matches-wrapper #matches .match .upcoming-fixture, #matches-wrapper #recent-matches .match .upcoming-fixture {
+        display: flex;
+        align-self: center; }
+      #matches-wrapper #matches .match a, #matches-wrapper #recent-matches .match a {
+        padding: 10px;
+        align-items: center;
+        text-align: center; }
+      #matches-wrapper #matches .match img, #matches-wrapper #recent-matches .match img {
+        height: 40px;
+        margin: 0 20px; }
 
 /*# sourceMappingURL=main.css.map */

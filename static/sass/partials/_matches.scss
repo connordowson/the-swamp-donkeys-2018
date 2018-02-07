@@ -1,0 +1,59 @@
+#matches-wrapper{
+    width: 500px;
+
+    #matches, #recent-matches{
+        background-color: $secondary-green;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        h2{
+            text-transform: uppercase;
+        }
+
+        .win{
+            background-color: #4CAF50;
+        }
+
+        .loss{
+            background-color: #E53935;
+        }
+
+        .match:nth-child(odd){
+            background-color: $main-green;
+        }
+
+        .match{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .upcoming-fixture{
+                display: flex;
+                align-self: center;
+            }
+
+            a{
+                padding: 10px;
+                align-items: center;
+                text-align: center;
+   
+            }
+
+
+            img{
+                height: 40px;
+                margin: 0 20px;
+            }
+
+            .fixture-date{
+            }
+
+        }
+
+    }
+
+}
