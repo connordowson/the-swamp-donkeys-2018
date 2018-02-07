@@ -1,0 +1,8 @@
+{{.Content}}
+
+{{ range first 4 (after 1 .Data.Pages) }}
+   
+    <h1> {{.Title}} </h1>
+       
+{{ end }}
+

@@ -27,7 +27,7 @@ nav {
     align-items: center;
     width: 500px; }
     nav ul li {
-      font-family: "Roboto", sans-serif;
+      font-family: "Open Sans", sans-serif;
       font-weight: 300;
       display: inline;
       padding: 10px 0;
@@ -50,21 +50,46 @@ nav {
           width: 100%; }
 
 body {
-  background-color: #222; }
+  background-color: #222;
+  background-image: url("https://www.transparenttextures.com/patterns/shattered-dark.png");
+  background-image: url("/assets/testbg.png");
+  background-size: 220px;
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ }
 
 #home-wrapper {
-  padding: 20px; }
-
-#home-news {
-  background-color: whitesmoke;
+  font-family: "Open Sans", sans-serif;
   padding: 20px;
-  width: 500px;
-  font-family: "Roboto", sans-serif;
-  margin: 0 auto; }
-  #home-news .home-news-title a {
+  box-sizing: border-box; }
+  #home-wrapper a {
     color: #222; }
-  #home-news .home-news-date {
-    color: #555;
-    font-style: italic; }
+  #home-wrapper #home-main-news {
+    background-color: #d2f9dd;
+    padding: 10px;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px; }
+    #home-wrapper #home-main-news img {
+      width: 100%; }
+    #home-wrapper #home-main-news .home-news-title a {
+      font-size: 1.2em; }
+    #home-wrapper #home-main-news .home-news-date {
+      color: #555;
+      font-style: italic; }
+    #home-wrapper #home-main-news p {
+      text-overflow: ellipsis; }
+  #home-wrapper #home-secondary-news .secondary-news-item {
+    background-color: #d2f9dd;
+    padding: 10px;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #home-wrapper #home-secondary-news .secondary-news-item .secondary-news-title a {
+      font-size: 0.8em; }
+    #home-wrapper #home-secondary-news .secondary-news-item .secondary-news-date {
+      text-align: right;
+      min-width: 100px; }
 
 /*# sourceMappingURL=main.css.map */

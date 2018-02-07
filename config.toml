@@ -3,3 +3,4 @@ languageCode = "en-us"
 title = "The Swamp Donkeys"
 staticDir = ["static"]
 uglyurls = false
+ignoreFiles = ["\\.scss$", "\\.bat$"]
