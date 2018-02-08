@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/js/twitter_feed.js"></script>
     <link rel="stylesheet" href="/css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Muli:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Muli:300,400,700|Montserrat:300,400,500,700" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title> The Swamp Donkeys </title>
 </head>
-<body>
+<body  onload="paint()">
 
     {{ partial "navbar" }}
 
@@ -101,7 +102,7 @@
                     
                 <p>{{ slicestr .Summary 0 130 }}...</p>
 
-                <a href="{{ .URL }}"> Read More </a>
+                <a id="read-more" href="{{ .URL }}"> Read More </a>
 
             </div>
             
@@ -135,16 +136,19 @@
             {{ end }}
 
             </div>
-
             
         </div>
 
         <!--  next column -->
 
-        <div id="wrapper">
+        <div id="twitter-wrapper">
 
-            <a width="500px" class="twitter-timeline" href="https://twitter.com/connagon?ref_src=twsrc%5Etfw">Tweets by connagon</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <h2> Twitter: </h2>
 
+            <a class="twitter-timeline" data-chrome="nofooter transparent noheader" data-width="500" data-height="600" data-theme="dark" data-link-color="#62DD8B"href="https://twitter.com/connagon/lists/cs?ref_src=twsrc%5Etfw">A Twitter List by connagon</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            
+            <div id="twitter-border"> </div>
+            
         </div>
 
     </div>

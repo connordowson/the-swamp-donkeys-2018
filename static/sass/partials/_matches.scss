@@ -2,20 +2,22 @@
     width: 500px;
 
     #matches, #recent-matches{
-        background-color: $secondary-green;
+        background-color: #444;
         padding: 20px;
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
         box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
+        border-bottom: 6px solid $main-green;
+
 
         h2{
-            text-transform: uppercase;
             text-align: left;
-            color: whitesmoke;
-            background-color: #222;
+            color: $secondary-green;
             padding: 5px;
             clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+            font-weight: 700;
+            font-weight: bold;
 
         }
 
@@ -28,7 +30,7 @@
         }
 
         .match:nth-child(odd){
-            background-color: $main-green;
+            background-color: #333;
         }
 
         .match{
@@ -36,6 +38,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
 
             .game-logo{
                 flex-grow: 1;
@@ -52,6 +55,7 @@
                 padding: 10px;
                 align-items: center;
                 text-align: center;
+                color: white;
    
             }
 

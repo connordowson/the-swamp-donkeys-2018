@@ -27,14 +27,14 @@ nav {
     align-items: center;
     width: 500px; }
     nav ul li {
-      font-family: "Muli", sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-weight: 300;
       display: inline;
       padding: 10px 0;
       margin-right: 20px;
       position: relative; }
       nav ul li a {
-        color: white;
+        color: #222;
         font-size: 15pt;
         text-decoration: none; }
         nav ul li a:after {
@@ -51,77 +51,103 @@ nav {
 
 body {
   background-color: #222;
-  background-image: url("https://www.transparenttextures.com/patterns/shattered-dark.png");
   background-size: 220px;
+  font-weight: 500;
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ }
 
 #home-wrapper {
-  font-family: "Muli", sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-  font-weight: 300; }
+  flex-wrap: wrap; }
   #home-wrapper a {
-    color: #222; }
+    color: white; }
   #home-wrapper #home-main-news {
-    background-color: #d2f9dd;
+    background-color: #333;
     padding: 10px;
     max-width: 700px;
     flex-grow: 1;
     margin: 0 auto;
     margin-bottom: 20px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5); }
-    #home-wrapper #home-main-news h1 {
-      font-weight: 300; }
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+    border-bottom: 6px solid #62DD8B; }
+    #home-wrapper #home-main-news * {
+      margin: 5px 0; }
+    #home-wrapper #home-main-news h2 {
+      text-decoration: none; }
+      #home-wrapper #home-main-news h2 a {
+        text-decoration: none;
+        color: #62DD8B; }
+      #home-wrapper #home-main-news h2 ::before {
+        content: ""; }
     #home-wrapper #home-main-news img {
       width: 100%; }
     #home-wrapper #home-main-news .home-news-title a {
       font-size: 1.2em; }
+    #home-wrapper #home-main-news .home-news-title :hover {
+      transform: translateY(-1px); }
+      #home-wrapper #home-main-news .home-news-title :hover a {
+        text-shadow: 1px 1px rgba(126, 126, 126, 0.5); }
     #home-wrapper #home-main-news .home-news-date {
-      color: #555;
+      font-weight: 300;
+      color: #777;
       font-style: italic; }
     #home-wrapper #home-main-news p {
-      text-overflow: ellipsis; }
-  #home-wrapper #home-secondary-news .secondary-news-item {
-    background-color: #d2f9dd;
-    padding: 10px;
-    max-width: 700px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5); }
-    #home-wrapper #home-secondary-news .secondary-news-item .secondary-news-title a {
-      font-size: 0.8em; }
-    #home-wrapper #home-secondary-news .secondary-news-item .secondary-news-date {
-      text-align: right;
-      min-width: 100px; }
+      text-overflow: ellipsis;
+      color: white; }
+    #home-wrapper #home-main-news #read-more {
+      color: #62DD8B;
+      font-weight: 700; }
+  #home-wrapper #home-secondary-news {
+    border-bottom: 6px solid #62DD8B; }
+    #home-wrapper #home-secondary-news .secondary-news-item:last-of-type {
+      border-bottom: none; }
+    #home-wrapper #home-secondary-news .secondary-news-item {
+      background-color: #333;
+      padding: 10px;
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+      border-bottom: 1px solid #d2f9dd; }
+      #home-wrapper #home-secondary-news .secondary-news-item .secondary-news-title a {
+        color: #d2f9dd;
+        font-size: 0.8em; }
+      #home-wrapper #home-secondary-news .secondary-news-item .secondary-news-title :hover {
+        transform: translateY(-1px); }
+        #home-wrapper #home-secondary-news .secondary-news-item .secondary-news-title :hover a {
+          text-shadow: 1px 1px rgba(126, 126, 126, 0.5); }
+      #home-wrapper #home-secondary-news .secondary-news-item .secondary-news-date {
+        text-align: right;
+        min-width: 100px; }
 
 #matches-wrapper {
   width: 500px; }
   #matches-wrapper #matches, #matches-wrapper #recent-matches {
-    background-color: #d2f9dd;
+    background-color: #444;
     padding: 20px;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5); }
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+    border-bottom: 6px solid #62DD8B; }
     #matches-wrapper #matches h2, #matches-wrapper #recent-matches h2 {
-      text-transform: uppercase;
       text-align: left;
-      color: whitesmoke;
-      background-color: #222;
+      color: #d2f9dd;
       padding: 5px;
-      clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%); }
+      clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+      font-weight: 700;
+      font-weight: bold; }
     #matches-wrapper #matches .win, #matches-wrapper #recent-matches .win {
       background-color: #4CAF50; }
     #matches-wrapper #matches .loss, #matches-wrapper #recent-matches .loss {
       background-color: #E53935; }
     #matches-wrapper #matches .match:nth-child(odd), #matches-wrapper #recent-matches .match:nth-child(odd) {
-      background-color: #62DD8B; }
+      background-color: #333; }
     #matches-wrapper #matches .match, #matches-wrapper #recent-matches .match {
       width: 100%;
       display: flex;
@@ -136,9 +162,23 @@ body {
       #matches-wrapper #matches .match a, #matches-wrapper #recent-matches .match a {
         padding: 10px;
         align-items: center;
-        text-align: center; }
+        text-align: center;
+        color: white; }
       #matches-wrapper #matches .match img, #matches-wrapper #recent-matches .match img {
         height: 40px;
         margin: 0 20px; }
+
+#twitter-wrapper h2 {
+  padding: 20px;
+  background-color: #333;
+  width: 500px;
+  color: #d2f9dd;
+  box-sizing: border-box; }
+#twitter-wrapper #twitter-border {
+  height: 6px;
+  width: 500px;
+  background-color: #62DD8B;
+  content: "";
+  margin-top: -4px; }
 
 /*# sourceMappingURL=main.css.map */

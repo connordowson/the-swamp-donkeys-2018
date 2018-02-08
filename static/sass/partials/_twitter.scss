@@ -1,0 +1,18 @@
+#twitter-wrapper{
+
+    h2{
+        padding: 20px;
+        background-color: #333;
+        width: 500px;
+        color: $secondary-green;
+        box-sizing: border-box;
+    }
+
+    #twitter-border{
+        height: 6px;
+        width: 500px;
+        background-color: $main-green;
+        content: "";
+        margin-top: -4px;
+    }
+}
