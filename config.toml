@@ -4,3 +4,4 @@ title = "The Swamp Donkeys"
 staticDir = ["static"]
 uglyurls = false
 ignoreFiles = ["\\.scss$", "\\.bat$"]
+googleAnalytics = "UA-91862758-1"

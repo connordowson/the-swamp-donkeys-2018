@@ -27,7 +27,7 @@ nav {
     align-items: center;
     width: 500px; }
     nav ul li {
-      font-family: "Open Sans", sans-serif;
+      font-family: "Muli", sans-serif;
       font-weight: 300;
       display: inline;
       padding: 10px 0;
@@ -52,25 +52,29 @@ nav {
 body {
   background-color: #222;
   background-image: url("https://www.transparenttextures.com/patterns/shattered-dark.png");
-  background-image: url("/assets/testbg.png");
   background-size: 220px;
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ }
 
 #home-wrapper {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Muli", sans-serif;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-weight: 300; }
   #home-wrapper a {
     color: #222; }
   #home-wrapper #home-main-news {
     background-color: #d2f9dd;
     padding: 10px;
-    width: 700px;
+    max-width: 700px;
     flex-grow: 1;
     margin: 0 auto;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5); }
+    #home-wrapper #home-main-news h1 {
+      font-weight: 300; }
     #home-wrapper #home-main-news img {
       width: 100%; }
     #home-wrapper #home-main-news .home-news-title a {
@@ -83,12 +87,13 @@ body {
   #home-wrapper #home-secondary-news .secondary-news-item {
     background-color: #d2f9dd;
     padding: 10px;
-    width: 700px;
+    max-width: 700px;
     margin: 0 auto;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5); }
     #home-wrapper #home-secondary-news .secondary-news-item .secondary-news-title a {
       font-size: 0.8em; }
     #home-wrapper #home-secondary-news .secondary-news-item .secondary-news-date {
@@ -101,11 +106,16 @@ body {
     background-color: #d2f9dd;
     padding: 20px;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5); }
     #matches-wrapper #matches h2, #matches-wrapper #recent-matches h2 {
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      text-align: left;
+      color: whitesmoke;
+      background-color: #222;
+      padding: 5px;
+      clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%); }
     #matches-wrapper #matches .win, #matches-wrapper #recent-matches .win {
       background-color: #4CAF50; }
     #matches-wrapper #matches .loss, #matches-wrapper #recent-matches .loss {
@@ -117,6 +127,9 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center; }
+      #matches-wrapper #matches .match .game-logo, #matches-wrapper #recent-matches .match .game-logo {
+        flex-grow: 1;
+        min-width: 80px; }
       #matches-wrapper #matches .match .upcoming-fixture, #matches-wrapper #recent-matches .match .upcoming-fixture {
         display: flex;
         align-self: center; }

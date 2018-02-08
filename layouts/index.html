@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Lobster|OpenSans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Muli:300,400" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title> The Swamp Donkeys </title>
@@ -31,7 +31,7 @@
 
                     <a class="game-logo"> <img src="/assets/logos/{{ .team }}.svg"/> </a>
                     
-                    <a class="upcoming-fixture"> <img src="/assets/logos/tsd_logo.svg"/> <a> TSD vs {{ .opponent }} </a> <img src="/assets/logos/{{ .opponent }}_logo.svg"/> </a>
+                    <a class="fixture"> <img src="/assets/logos/tsd_logo.svg"/> <a> TSD vs {{ .opponent }} </a> <img src="/assets/logos/{{ .opponent }}_logo.svg"/> </a>
                     
                     <a class="fixture-date"> {{ .date }}  </a>
 
@@ -122,7 +122,7 @@
                     </div>
 
                     <div class="secondary-news-date"> <a> {{ dateFormat "Jan 2 2006" .Date }}</a></div>
-    <!-- 
+                     <!-- 
                     <div> {{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
                     <div> {{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
                     <div> {{ if .Params.moods }}<strong>Moods:</strong> {{range .Params.moods}}<a href="{{ "/moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
@@ -148,6 +148,8 @@
         </div>
 
     </div>
+
+    {{ template "_internal/google_analytics.html" . }}
 
 
 </body>

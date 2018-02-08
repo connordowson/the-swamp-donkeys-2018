@@ -5,12 +5,18 @@
         background-color: $secondary-green;
         padding: 20px;
         display: flex;
-        align-items: center;
         flex-direction: column;
         margin-bottom: 20px;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
 
         h2{
             text-transform: uppercase;
+            text-align: left;
+            color: whitesmoke;
+            background-color: #222;
+            padding: 5px;
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+
         }
 
         .win{
@@ -30,6 +36,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            .game-logo{
+                flex-grow: 1;
+                min-width: 80px;
+
+            }
 
             .upcoming-fixture{
                 display: flex;

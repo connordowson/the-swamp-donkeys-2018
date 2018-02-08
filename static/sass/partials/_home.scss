@@ -1,7 +1,7 @@
 body{
     background-color: #222;
     background-image: url("https://www.transparenttextures.com/patterns/shattered-dark.png");
-    background-image: url("/assets/testbg.png");
+    // background-image: url("/assets/testbg.png");
     background-size: 220px;
 
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
@@ -13,6 +13,8 @@ body{
     box-sizing: border-box;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    font-weight: 300;
 
     a{
         color: #222;
@@ -21,10 +23,16 @@ body{
     #home-main-news{
         background-color: $secondary-green;
         padding: 10px;
-        width: 700px;
+        max-width: 700px;
         flex-grow: 1;
         margin: 0 auto;
         margin-bottom: 20px;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
+
+        h1{
+            font-weight: 300;
+
+        }
 
         img{
             width: 100%;
@@ -54,13 +62,14 @@ body{
         .secondary-news-item{
             background-color: $secondary-green;
             padding: 10px;
-            width: 700px;
+            max-width: 700px;
             margin: 0 auto;
             margin-bottom: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
+
             .secondary-news-title{
 
                 a{
