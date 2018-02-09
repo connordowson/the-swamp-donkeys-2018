@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#62DD8B">
     <script src="/js/twitter_feed.js"></script>
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Muli:300,400,700|Montserrat:300,400,500,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <title> The Swamp Donkeys </title>
@@ -17,73 +19,13 @@
 
     <div id="home-wrapper">
 
-        <div id="matches-wrapper">
-
-            <!-- Gets upcoming matches from json file -->
-            <div id="matches">
-
-                <h2> Upcoming matches: </h2>
-
-                {{.Content}}
-                    
-                {{ range last 3 .Site.Data.upcoming_matches }}
-
-                <div class="match">
-
-                    <a class="game-logo"> <img src="/assets/logos/{{ .team }}.svg"/> </a>
-                    
-                    <a class="fixture"> <img src="/assets/logos/tsd_logo.svg"/> <a> TSD vs {{ .opponent }} </a> <img src="/assets/logos/{{ .opponent }}_logo.svg"/> </a>
-                    
-                    <a class="fixture-date"> {{ .date }}  </a>
-
-                </div>
-
-                {{ end }}
-                    
-            </div>
-
-            <!-- Gets recent matches from json file -->
-            <div id="recent-matches">
-
-                    <h2> Recent matches: </h2>
-    
-                    {{.Content}}
-                        
-                    {{ range last 3 .Site.Data.recent_matches }}
-
-                    {{ $result := .result }}
-    
-                    <div class="match">
-    
-                        <a class="game-logo"> <img src="/assets/logos/{{ .team }}.svg"/> </a>
-                        
-                        <a class="fixture"> <img src="/assets/logos/tsd_logo.svg"/> 
-                            
-                        <a class="result">  
-
-                            TSD {{ .score }} {{ .opponent }} 
-                        
-                        </a>
-                        
-                        <img src="/assets/logos/{{ .opponent }}_logo.svg"/> </a>
-                        
-                        <a class="fixture-date"> {{ .date }}  </a>
-    
-                    </div>
-    
-                    {{ end }}
-                        
-                </div>
-
-        </div>
-
         <!-- Shows first story as main feature -->
 
         <div id="news-wrapper">
 
             {{.Content}}
 
-            {{ range first 1 .Data.Pages }}
+            {{ range first 1 ( where  .Data.Pages "Section" "news" ) }}
 
             <div id="home-main-news">
 
@@ -102,19 +44,18 @@
                     
                 <p>{{ slicestr .Summary 0 130 }}...</p>
 
+
                 <a id="read-more" href="{{ .URL }}"> Read More </a>
 
             </div>
             
-            {{ .Render "test"}}
-
             {{ end }}
 
             <div id="home-secondary-news">
 
             {{.Content}}
 
-            {{ range first 4 (after 1 .Data.Pages) }}
+            {{ range first 4  (after 1 ( where  .Data.Pages "Section" "news" )) }}
 
                 <div class="secondary-news-item">
             
@@ -123,13 +64,6 @@
                     </div>
 
                     <div class="secondary-news-date"> <a> {{ dateFormat "Jan 2 2006" .Date }}</a></div>
-                     <!-- 
-                    <div> {{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-                    <div> {{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-                    <div> {{ if .Params.moods }}<strong>Moods:</strong> {{range .Params.moods}}<a href="{{ "/moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-
-                    
-                    <p>{{.Summary}}</p> -->
 
                 </div>
                 
@@ -137,6 +71,66 @@
 
             </div>
             
+        </div>
+
+        <div id="matches-wrapper">
+
+            <!-- Gets upcoming matches from json file -->
+            <div id="matches">
+    
+                <h2> Upcoming matches: </h2>
+    
+                {{.Content}}
+                        
+                {{ range last 3 .Site.Data.upcoming_matches }}
+    
+                <div class="match">
+    
+                    <a class="game-logo"> <img src="/assets/logos/{{ .team }}.svg"/> </a>
+                        
+                    <a class="fixture"> <img src="/assets/logos/tsd_logo.svg"/> <a> TSD vs {{ .opponent }} </a> <img src="/assets/logos/{{ .opponent }}_logo.svg"/> </a>
+                        
+                    <a class="fixture-date"> {{ .date }}  </a>
+    
+                </div>
+    
+                {{ end }}
+                        
+             </div>
+    
+            <!-- Gets recent matches from json file -->
+            <div id="recent-matches">
+    
+                    <h2> Recent matches: </h2>
+        
+                    {{.Content}}
+                            
+                    {{ range last 3 .Site.Data.recent_matches }}
+    
+                    {{ $result := .result }}
+        
+                    <div class="match">
+        
+                        <a class="game-logo"> <img src="/assets/logos/{{ .team }}.svg"/> </a>
+                            
+                        <a class="fixture"> <img src="/assets/logos/tsd_logo.svg"/> 
+                                
+                        <a class="result">  
+    
+                            TSD {{ .score }} {{ .opponent }} 
+                            
+                        </a>
+                            
+                        <img src="/assets/logos/{{ .opponent }}_logo.svg"/> </a>
+                            
+                        <a class="fixture-date"> {{ .date }}  </a>
+        
+                    </div>
+        
+                    {{ end }}
+                            
+                </div>
+    
         </div>
 
         <!--  next column -->
@@ -147,9 +141,12 @@
 
             <h2> Twitter: </h2>
 
-            <a class="twitter-timeline" data-chrome="nofooter transparent noheader" data-width="500" data-height="600" data-theme="dark" data-link-color="#62DD8B"href="https://twitter.com/connagon/lists/cs?ref_src=twsrc%5Etfw">A Twitter List by connagon</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a class="twitter-timeline" data-chrome="nofooter transparent noheader" data-width="500px" data-height="600" data-theme="dark" data-link-color="#62DD8B"href="https://twitter.com/connagon/lists/cs?ref_src=twsrc%5Etfw">A Twitter List by connagon</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             
         </div>
+
+        {{ partial "footer" }}
+
 
     </div>
 

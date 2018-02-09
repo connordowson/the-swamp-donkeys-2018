@@ -13,15 +13,57 @@ nav{
 
         a{
             font-family: $title-font;
-            font-size: 26pt;
+            font-size: 20pt;
             color: white;
-            margin-left: 60px;
+            margin-left: 55px;
         }
 
         img{
             height: 50px;
             position: absolute;
         }
+
+    }
+
+    .menu-top-hover{
+        transform: translateY(12px) rotate(45deg);
+    }
+
+    .menu-bottom-hover{
+        transform: translateY(-12px) rotate(-45deg) ;
+    }
+
+    .menu-middle-hover{
+        opacity: 0;
+
+    }
+
+    #mobile-menu{
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: center;
+        margin-right: 10px;
+        transition: all 0.5s;
+
+ 
+
+        .menu-bar{
+            content: "";
+            background-color: $off-white;
+            height: 6px;
+            width: 30px;
+            transition: all 0.5s;
+            transform-origin: 50% 50%;
+        }
+
+        #menu-top{
+            transform-origin: 50% 50%;
+
+        }
+
+
 
     }
 

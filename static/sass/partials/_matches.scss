@@ -1,9 +1,14 @@
 #matches-wrapper{
-    width: 500px;
+    width: 100%;
+    order: 2;
+
+    a{
+        color: $off-white;
+    }
 
     #matches, #recent-matches{
         background-color: #444;
-        padding: 20px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
@@ -14,7 +19,7 @@
         h2{
             text-align: left;
             color: $secondary-green;
-            padding: 5px;
+            padding: 10px;
             clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
             font-weight: 700;
             font-weight: bold;
@@ -41,8 +46,7 @@
             
 
             .game-logo{
-                flex-grow: 1;
-                min-width: 80px;
+              
 
             }
 
@@ -56,13 +60,13 @@
                 align-items: center;
                 text-align: center;
                 color: $off-white;
+                font-size: 0.8em;
    
             }
 
 
             img{
                 height: 40px;
-                margin: 0 20px;
             }
 
             .fixture-date{

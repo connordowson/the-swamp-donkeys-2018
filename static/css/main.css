@@ -15,12 +15,35 @@ nav {
     align-items: center; }
     nav #nav-title a {
       font-family: "Lobster", cursive;
-      font-size: 26pt;
+      font-size: 20pt;
       color: white;
-      margin-left: 60px; }
+      margin-left: 55px; }
     nav #nav-title img {
       height: 50px;
       position: absolute; }
+  nav .menu-top-hover {
+    transform: translateY(12px) rotate(45deg); }
+  nav .menu-bottom-hover {
+    transform: translateY(-12px) rotate(-45deg); }
+  nav .menu-middle-hover {
+    opacity: 0; }
+  nav #mobile-menu {
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    margin-right: 10px;
+    transition: all 0.5s; }
+    nav #mobile-menu .menu-bar {
+      content: "";
+      background-color: #F5F5F5;
+      height: 6px;
+      width: 30px;
+      transition: all 0.5s;
+      transform-origin: 50% 50%; }
+    nav #mobile-menu #menu-top {
+      transform-origin: 50% 50%; }
   nav ul {
     display: flex;
     justify-content: space-between;
@@ -60,13 +83,12 @@ body {
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; }
-  #home-wrapper a {
-    color: #F5F5F5; }
+  flex-wrap: wrap;
+  padding-bottom: 50px; }
   #home-wrapper #home-main-news {
     background-color: #333;
     padding: 10px;
-    max-width: 700px;
+    max-width: 100%;
     flex-grow: 1;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -79,8 +101,6 @@ body {
       #home-wrapper #home-main-news h2 a {
         text-decoration: none;
         color: #62DD8B; }
-      #home-wrapper #home-main-news h2 ::before {
-        content: ""; }
     #home-wrapper #home-main-news img {
       width: 100%; }
     #home-wrapper #home-main-news .home-news-title a {
@@ -101,13 +121,14 @@ body {
       color: #62DD8B;
       font-weight: 700; }
   #home-wrapper #home-secondary-news {
-    border-top: 6px solid #62DD8B; }
+    border-top: 6px solid #62DD8B;
+    margin-bottom: 20px; }
     #home-wrapper #home-secondary-news .secondary-news-item:last-of-type {
       border-bottom: none; }
     #home-wrapper #home-secondary-news .secondary-news-item {
       background-color: #333;
       padding: 10px;
-      max-width: 700px;
+      max-width: 100%;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -123,14 +144,18 @@ body {
         #home-wrapper #home-secondary-news .secondary-news-item .secondary-news-title :hover a {
           text-shadow: 1px 1px rgba(126, 126, 126, 0.5); }
       #home-wrapper #home-secondary-news .secondary-news-item .secondary-news-date {
+        color: #F5F5F5;
         text-align: right;
         min-width: 100px; }
 
 #matches-wrapper {
-  width: 500px; }
+  width: 100%;
+  order: 2; }
+  #matches-wrapper a {
+    color: #F5F5F5; }
   #matches-wrapper #matches, #matches-wrapper #recent-matches {
     background-color: #444;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -139,7 +164,7 @@ body {
     #matches-wrapper #matches h2, #matches-wrapper #recent-matches h2 {
       text-align: left;
       color: #d2f9dd;
-      padding: 5px;
+      padding: 10px;
       clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
       font-weight: 700;
       font-weight: bold; }
@@ -154,9 +179,6 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center; }
-      #matches-wrapper #matches .match .game-logo, #matches-wrapper #recent-matches .match .game-logo {
-        flex-grow: 1;
-        min-width: 80px; }
       #matches-wrapper #matches .match .upcoming-fixture, #matches-wrapper #recent-matches .match .upcoming-fixture {
         display: flex;
         align-self: center; }
@@ -164,21 +186,44 @@ body {
         padding: 10px;
         align-items: center;
         text-align: center;
-        color: #F5F5F5; }
+        color: #F5F5F5;
+        font-size: 0.8em; }
       #matches-wrapper #matches .match img, #matches-wrapper #recent-matches .match img {
-        height: 40px;
-        margin: 0 20px; }
+        height: 40px; }
 
-#twitter-wrapper h2 {
-  padding: 20px;
-  background-color: #333;
-  width: 500px;
-  color: #d2f9dd;
-  box-sizing: border-box; }
-#twitter-wrapper #twitter-border {
-  height: 6px;
-  width: 500px;
+#twitter-wrapper {
+  width: 100%;
+  margin-bottom: 20px; }
+  #twitter-wrapper * {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5); }
+  #twitter-wrapper h2 {
+    padding: 20px;
+    background-color: #333;
+    width: 100%;
+    color: #d2f9dd;
+    box-sizing: border-box;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5); }
+  #twitter-wrapper #twitter-border {
+    height: 6px;
+    width: 100%;
+    background-color: #62DD8B;
+    content: ""; }
+
+footer {
+  position: fixed;
+  bottom: 0;
   background-color: #62DD8B;
-  content: ""; }
+  width: 100%; }
+  footer ul {
+    display: flex;
+    justify-content: space-around; }
+    footer ul li {
+      display: inline-block;
+      padding: 15px; }
+      footer ul li a {
+        text-decoration: none;
+        color: #222; }
+        footer ul li a:hover {
+          color: white; }
 
 /*# sourceMappingURL=main.css.map */

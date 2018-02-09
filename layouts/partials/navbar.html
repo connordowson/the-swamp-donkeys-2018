@@ -6,11 +6,34 @@
     
     </div>
 
-    <ul>
+    <div id="mobile-menu" onClick="hamburgerAnimation()">
+
+        <div class="menu-bar" id="menu-top"></div>
+
+        <div class="menu-bar" id="menu-middle"></div>
+
+        <div class="menu-bar" id="menu-bottom"></div>
+
+    </div>
+
+    <script> 
+    
+    function hamburgerAnimation(){
+
+        document.getElementById("menu-top").classList.toggle("menu-top-hover");
+        document.getElementById("menu-middle").classList.toggle("menu-middle-hover");
+        document.getElementById("menu-bottom").classList.toggle("menu-bottom-hover");
+
+    }
+    
+    </script>
+
+    <!-- <ul>
         <li> <a href="/"> Home </a> </li>
         <li> <a href=" "> Rosters </a> </li>
         <li> <a href=" "> News </a> </li>
         <li> <a href=" "> Store </a> </li>
-    </ul>
+    </ul> -->
+
 
 </nav>
