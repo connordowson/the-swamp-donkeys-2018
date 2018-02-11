@@ -1,5 +1,5 @@
 var widgetCSS = "" +
-    "#twitter-widget-0{         box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);  }" +
+    "#twitter-widget-0{box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);}" +
     "body{font-family: 'Montserrat', sans-serif;}" +
     ".timeline-Body{background-color: #333; border-bottom: 5px solid $main-green;}" +
     ".timeline-Footer{background-color: #333; border-bottom: 5px solid $main-green;}" +

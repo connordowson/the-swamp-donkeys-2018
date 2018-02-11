@@ -1,0 +1,45 @@
+#single-post-wrapper{
+    width: 100%;
+    padding-bottom: 40px;
+
+    @include tablet{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+
+    @include desktop{
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    *{
+        margin-bottom: 10px;
+    }
+
+    h1{
+        color: $main-green;
+    }
+
+    #single-post-date, h4{
+        color: #999;
+        font-style: italic;
+        font-weight: 300;
+    }
+
+    h4{
+        margin: 10px 0;
+    }
+
+    img{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    p{
+        color: $off-white;
+    }
+
+
+}

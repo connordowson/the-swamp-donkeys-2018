@@ -1,0 +1,137 @@
+ #news-wrapper{
+
+    @include tablet{
+        max-width: 80%;
+    }
+
+    @include desktop{
+        min-width: 500px;
+        max-width: 600px;
+        order: 2;
+    }
+         
+    #home-main-news{
+        background-color: #333;
+        padding: 10px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
+        border-top: 6px solid $main-green;
+    
+        
+        *{
+            margin: 5px 0;
+        }
+
+        h2{
+            text-decoration: none;
+
+
+            a{
+                text-decoration: none;
+                color: $main-green;
+            }
+
+        }
+
+        img{
+            width: 100%;
+            // mix-blend-mode: multiply;
+            // filter: grayscale(100%);
+        }
+
+        .home-news-title{
+            
+            a{
+                font-size: 1.2em;
+
+                &:hover{
+
+                    color: $main-green-hover;
+
+                }
+
+            }
+
+        }
+
+        .home-news-date{
+            font-weight: 300;
+            color: #777;
+            font-style: italic;
+        }
+
+        p{
+            text-overflow: ellipsis;
+            color: $off-white;
+            font-weight: 300;
+        }
+
+        #read-more{
+            color: $main-green;
+            font-weight: 700;
+
+            &:hover{
+
+                color: $main-green-hover;
+
+            }
+        }
+
+    }
+
+    #home-secondary-news{
+        border-top: 6px solid $main-green;
+        margin-bottom: 20px;
+
+        .secondary-news-item:last-of-type{
+            border-bottom: none;
+        }
+
+        .secondary-news-item{
+            background-color: #333;
+            padding: 10px;
+            max-width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
+            border-bottom: 1px solid $secondary-green;
+
+            .secondary-news-title{
+
+                margin: 0;
+
+                a{
+                    color: $secondary-green;
+                    font-size: 0.8em;
+                    font-weight: 500;
+                
+                }
+
+                :hover{
+                    transform: translateY(-1px);
+
+                    a{
+                        text-shadow: 1px 1px rgba(126, 126, 126, 0.5);
+                    }
+
+                }
+
+            }
+
+            .secondary-news-date{
+                color: $off-white;
+                text-align: right;
+                min-width: 100px;
+                margin: 0;
+            }
+
+        }
+
+
+    }
+
+ }

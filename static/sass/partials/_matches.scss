@@ -2,6 +2,15 @@
     width: 100%;
     order: 2;
 
+    @include tablet{
+        max-width: 600px;
+    }
+
+    @include desktop{
+        max-width: 500px;
+        order: 1;
+    }
+
     a{
         color: $off-white;
     }

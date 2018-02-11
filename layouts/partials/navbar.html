@@ -6,7 +6,7 @@
     
     </div>
 
-    <div id="mobile-menu" onClick="hamburgerAnimation()">
+    <div id="mobile-menu-hamburger" onClick="hamburgerAnimation()">
 
         <div class="menu-bar" id="menu-top"></div>
 
@@ -24,16 +24,25 @@
         document.getElementById("menu-middle").classList.toggle("menu-middle-hover");
         document.getElementById("menu-bottom").classList.toggle("menu-bottom-hover");
 
+        document.getElementById("mobile-menu").classList.toggle("mobile-toggle");
+
     }
     
     </script>
 
-    <!-- <ul>
+    <ul id="desktop-menu">
         <li> <a href="/"> Home </a> </li>
         <li> <a href=" "> Rosters </a> </li>
         <li> <a href=" "> News </a> </li>
         <li> <a href=" "> Store </a> </li>
-    </ul> -->
+    </ul>
 
 
 </nav>
+
+<ul id="mobile-menu">
+    <li> <a href="/"> Home </a> </li>
+    <li> <a href=" "> Rosters </a> </li>
+    <li> <a href=" "> News </a> </li>
+    <li> <a href=" "> Store </a> </li>
+</ul>

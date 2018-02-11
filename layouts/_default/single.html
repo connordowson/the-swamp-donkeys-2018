@@ -1,22 +1,35 @@
 <html>
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <link rel="stylesheet" href="/css/main.css">
-     <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto:300,400" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#62DD8B">
+    <script src="/js/twitter_feed.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Muli:300,400,700|Montserrat:300,400,500,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
      <title> {{.Title}} - The Swamp Donkeys </title>
 </head>
 <body>
     
      {{ partial "navbar" }}
 
-     <div style="margin:25px;">
-          <h1>{{.Title}}</h1>
-          <div style="color:grey; font-size:26px;">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
-          <div style="color:grey; font-size:16px;">{{if .Params.author}}Author: {{.Params.Author}}{{end}}</div>
-          <div style="font-size:18px;">{{.Content}}</div>
-     </div>
-     <!-- {{ partial "footer" . }} -->
+     <div class="main-wrapper">
+
+        <div id="single-post-wrapper">
+
+            <h1>{{.Title}}</h1>
+
+            <div id="single-post-date">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+            <div> {{if .Params.author}}Author: {{.Params.Author}}{{end}}</div>
+            <div> {{.Content}}</div>
+
+        </div>
+
+    </div>
+
+     {{ partial "footer" . }}
 </body>
 </html>

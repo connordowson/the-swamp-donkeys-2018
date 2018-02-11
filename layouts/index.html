@@ -17,7 +17,7 @@
 
     {{ partial "navbar" }}
 
-    <div id="home-wrapper">
+    <div id="home-wrapper" class="main-wrapper">
 
         <!-- Shows first story as main feature -->
 
@@ -55,7 +55,7 @@
 
             {{.Content}}
 
-            {{ range first 4  (after 1 ( where  .Data.Pages "Section" "news" )) }}
+            {{ range first 4 ( after 1 ( where .Data.Pages "Section" "news" )) }}
 
                 <div class="secondary-news-item">
             
@@ -141,8 +141,12 @@
 
             <h2> Twitter: </h2>
 
-            <a class="twitter-timeline" data-chrome="nofooter transparent noheader" data-width="500px" data-height="600" data-theme="dark" data-link-color="#62DD8B"href="https://twitter.com/connagon/lists/cs?ref_src=twsrc%5Etfw">A Twitter List by connagon</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div id="twitter-widget-wrapper">
+
+                <a class="twitter-timeline" data-chrome="nofooter transparent noheader" data-width="100%"  data-height="100%" data-theme="dark" data-link-color="#62DD8B"href="https://twitter.com/connagon/lists/cs?ref_src=twsrc%5Etfw">A Twitter List by connagon</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             
+            </div>
+
         </div>
 
         {{ partial "footer" }}

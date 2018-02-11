@@ -1,5 +1,5 @@
 footer{
-        position: fixed;
+    position: fixed;
     bottom: 0;
     background-color: $main-green;
     width: 100%;
@@ -19,6 +19,14 @@ footer{
 
                 &:hover{
                     color: white;
+                }
+
+                @include tablet{
+                    font-size: 1.4em;
+                }
+
+                @include desktop{
+                    font-size: 1.4em;
                 }
 
             }

@@ -1,10 +1,21 @@
 #twitter-wrapper{
     width: 100%;
     margin-bottom: 20px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
 
-    *{
-        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
+    #twitter-widget-wrapper{
+        height: 400px;
+    }
 
+    @include tablet{
+        max-width: 600px;
+        order: 3;
+    }
+
+    @include desktop{
+        max-width: 600px;
+        height: 400px;
+        order: 3;
     }
 
     h2{

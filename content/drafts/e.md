@@ -1,7 +1,7 @@
 ---
 title: "The Swamp Donkeys pick up CS:GO roster"
 date: 2018-02-06T22:48:58Z
-draft: true
+draft: false
 imageurl: "donkey.jpg"
 ---
 

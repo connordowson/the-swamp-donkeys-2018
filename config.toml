@@ -2,6 +2,6 @@ baseURL = "http://www.theswampdonkeys.com/"
 languageCode = "en-us"
 title = "The Swamp Donkeys"
 staticDir = ["static"]
+ignoreFiles = ["\\.scss$", "\\.bat$", "\\.sass$", "sass/.*"]
 uglyurls = false
-ignoreFiles = ["\\.scss$", "\\.bat$", "\\.sass$"]
 googleAnalytics = "UA-91862758-1"
