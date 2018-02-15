@@ -1,0 +1,21 @@
+<div id="matches">
+    
+    <h2> Upcoming matches: </h2>
+
+    {{.Content}}
+            
+    {{ range last 3 ( where .Site.Data.upcoming_matches ) }}
+
+    <div class="match">
+
+        <a class="game-logo"> <img src="/assets/logos/{{ .team }}.svg"/> </a>
+            
+        <a class="fixture"> <img src="/assets/logos/tsd_logo.svg"/> <a> TSD vs {{ .opponent }} </a> <img src="/assets/logos/{{ .opponent }}_logo.svg"/> </a>
+            
+        <a class="fixture-date"> {{ .date }}  </a>
+
+    </div>
+
+    {{ end }}
+            
+ </div>

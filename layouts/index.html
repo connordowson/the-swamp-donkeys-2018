@@ -76,7 +76,7 @@
         <div id="matches-wrapper">
 
             <!-- Gets upcoming matches from json file -->
-            <div id="matches">
+            <div id="upcoming-matches" class="default-panel">
     
                 <h2> Upcoming matches: </h2>
     
@@ -99,16 +99,14 @@
              </div>
     
             <!-- Gets recent matches from json file -->
-            <div id="recent-matches">
+            <div id="recent-matches" class="default-panel">
     
                     <h2> Recent matches: </h2>
         
                     {{.Content}}
                             
                     {{ range last 3 .Site.Data.recent_matches }}
-    
-                    {{ $result := .result }}
-        
+            
                     <div class="match">
         
                         <a class="game-logo"> <img src="/assets/logos/{{ .team }}.svg"/> </a>

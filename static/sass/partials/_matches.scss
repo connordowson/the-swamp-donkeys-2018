@@ -15,14 +15,11 @@
         color: $off-white;
     }
 
-    #matches, #recent-matches{
-        background-color: #444;
+    #upcoming-matches, #recent-matches{
         padding: 10px;
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
-        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
-        border-top: 6px solid $main-green;
 
 
         h2{
@@ -31,8 +28,6 @@
             padding: 10px;
             clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
             font-weight: 700;
-            font-weight: bold;
-
         }
 
         .win{
@@ -44,7 +39,7 @@
         }
 
         .match:nth-child(odd){
-            background-color: #333;
+            background-color: #444;
         }
 
         .match{
@@ -52,12 +47,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
-
-            .game-logo{
-              
-
-            }
+    
 
             .upcoming-fixture{
                 display: flex;
@@ -76,9 +66,6 @@
 
             img{
                 height: 40px;
-            }
-
-            .fixture-date{
             }
 
         }

@@ -1,0 +1,47 @@
+#rosters-list-wrapper{
+
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+
+    @include tablet{
+        width: 500px;
+    }
+
+    @include desktop{
+        width: 800px;
+    }
+
+    h1{
+        margin-bottom: 10px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .roster-link{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+        background-size: 400px;
+        margin-bottom: 10px;
+        border-left: $green-border;
+
+        &:hover h2{
+            color: $main-green;
+        }
+
+        h2{
+            color: $secondary-green;
+            text-decoration: none;
+        }
+
+        img{
+            height: 40px;
+        }
+
+    }
+
+}

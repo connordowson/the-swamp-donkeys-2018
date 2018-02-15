@@ -1,0 +1,70 @@
+#team-page-wrapper{
+    width: 100%;
+    color: white;
+
+
+    h1{
+        margin-bottom: 20px;
+    }
+
+    #players-wrapper{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .player-card{
+            width: 100%;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+
+            @include tablet{
+                margin-right: 20px;
+            }
+
+            @include desktop{
+                max-width: 320px;
+                margin-right: 20px;
+            }
+
+            img{
+                width: 260px;
+                align-self: center;
+                margin-top: 20px;
+            }
+        
+    
+            .player-card-name{
+                font-size: 1.4em;
+                font-weight: 700;
+                line-height: 1.6;
+                margin-bottom: -10px;
+            }
+
+            a{
+                text-align: center;
+                background-color: $main-green;
+
+                &:hover{
+                    background-color: $main-green-hover;
+                }
+            }
+    
+            p{
+                padding: 10px;
+                box-sizing: border-box;
+            }
+    
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+
+            .player-card-role{
+                line-height: 0.6;
+            }
+    
+        }
+
+    }
+
+}

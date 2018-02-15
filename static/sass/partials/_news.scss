@@ -17,7 +17,7 @@
         margin: 0 auto;
         margin-bottom: 20px;
         box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
-        border-top: 6px solid $main-green;
+        border-top: $green-border;
     
         
         *{
@@ -82,7 +82,7 @@
     }
 
     #home-secondary-news{
-        border-top: 6px solid $main-green;
+        border-top: $green-border;
         margin-bottom: 20px;
 
         .secondary-news-item:last-of-type{

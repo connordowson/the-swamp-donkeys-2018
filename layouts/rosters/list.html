@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#62DD8B">
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Muli:300,400,700|Montserrat:300,400,500,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+     <title> Rosters </title>
+</head>
+<body>
+    
+    {{ partial "navbar" . }}
+
+    <div class="main-wrapper">
+
+        <div id="rosters-list-wrapper" class="default-panel">
+
+        <h1> Rosters </h1>
+
+        <div class="roster-links-wrapper">
+
+            {{.Content}}
+
+
+            {{ range first 4 ( where .Data.Pages "Section" "rosters" ) }}
+
+            <a href="{{ .URL }}">
+
+                <div class="roster-link" {{ with .Params.rostergame }} style="background: url('/assets/{{ . }}_roster_link.png'); background-position: left; background-repeat: no-repeat; background-color: #444; background-size: 400px;" {{ end }} >
+
+                    <img {{ with .Params.rostergame }} src="/assets/logos/{{ . }}.svg" {{ end }} />
+
+                     <h2> {{.Title}} </h2>
+
+                </div>
+
+            </a>
+                
+            {{ end }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {{ partial "footer" . }}
+     
+</body>
+</html>

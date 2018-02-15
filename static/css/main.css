@@ -2,6 +2,10 @@
   padding: 0;
   margin: 0; }
 
+a {
+  color: #F5F5F5;
+  text-decoration: none; }
+
 nav {
   width: 100%;
   color: white;
@@ -135,6 +139,18 @@ body {
       #home-wrapper div {
         margin: 0 auto; } }
 
+h1 {
+  color: #d2f9dd; }
+
+.default-panel {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+  background-color: #333;
+  box-sizing: border-box;
+  padding: 20px;
+  border-top: 6px solid #62DD8B; }
+  .default-panel h1, .default-panel h2 {
+    color: #d2f9dd; }
+
 @media only screen and (min-device-width: 640px) and (max-device-width: 1780px) {
   #news-wrapper {
     max-width: 80%; } }
@@ -220,42 +236,38 @@ body {
       order: 1; } }
   #matches-wrapper a {
     color: #F5F5F5; }
-  #matches-wrapper #matches, #matches-wrapper #recent-matches {
-    background-color: #444;
+  #matches-wrapper #upcoming-matches, #matches-wrapper #recent-matches {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
-    border-top: 6px solid #62DD8B; }
-    #matches-wrapper #matches h2, #matches-wrapper #recent-matches h2 {
+    margin-bottom: 20px; }
+    #matches-wrapper #upcoming-matches h2, #matches-wrapper #recent-matches h2 {
       text-align: left;
       color: #d2f9dd;
       padding: 10px;
       clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
-      font-weight: 700;
-      font-weight: bold; }
-    #matches-wrapper #matches .win, #matches-wrapper #recent-matches .win {
+      font-weight: 700; }
+    #matches-wrapper #upcoming-matches .win, #matches-wrapper #recent-matches .win {
       background-color: #4CAF50; }
-    #matches-wrapper #matches .loss, #matches-wrapper #recent-matches .loss {
+    #matches-wrapper #upcoming-matches .loss, #matches-wrapper #recent-matches .loss {
       background-color: #E53935; }
-    #matches-wrapper #matches .match:nth-child(odd), #matches-wrapper #recent-matches .match:nth-child(odd) {
-      background-color: #333; }
-    #matches-wrapper #matches .match, #matches-wrapper #recent-matches .match {
+    #matches-wrapper #upcoming-matches .match:nth-child(odd), #matches-wrapper #recent-matches .match:nth-child(odd) {
+      background-color: #444; }
+    #matches-wrapper #upcoming-matches .match, #matches-wrapper #recent-matches .match {
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center; }
-      #matches-wrapper #matches .match .upcoming-fixture, #matches-wrapper #recent-matches .match .upcoming-fixture {
+      #matches-wrapper #upcoming-matches .match .upcoming-fixture, #matches-wrapper #recent-matches .match .upcoming-fixture {
         display: flex;
         align-self: center; }
-      #matches-wrapper #matches .match a, #matches-wrapper #recent-matches .match a {
+      #matches-wrapper #upcoming-matches .match a, #matches-wrapper #recent-matches .match a {
         padding: 10px;
         align-items: center;
         text-align: center;
         color: #F5F5F5;
         font-size: 0.8em; }
-      #matches-wrapper #matches .match img, #matches-wrapper #recent-matches .match img {
+      #matches-wrapper #upcoming-matches .match img, #matches-wrapper #recent-matches .match img {
         height: 40px; }
 
 #twitter-wrapper {
@@ -314,6 +326,79 @@ body {
   #single-post-wrapper p {
     color: #F5F5F5; }
 
+#rosters-list-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 10px; }
+  @media only screen and (min-device-width: 640px) and (max-device-width: 1780px) {
+    #rosters-list-wrapper {
+      width: 500px; } }
+  @media only screen and (min-device-width: 1780px) {
+    #rosters-list-wrapper {
+      width: 800px; } }
+  #rosters-list-wrapper h1 {
+    margin-bottom: 10px; }
+  #rosters-list-wrapper a {
+    text-decoration: none; }
+  #rosters-list-wrapper .roster-link {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background-size: 400px;
+    margin-bottom: 10px;
+    border-left: 6px solid #62DD8B; }
+    #rosters-list-wrapper .roster-link:hover h2 {
+      color: #62DD8B; }
+    #rosters-list-wrapper .roster-link h2 {
+      color: #d2f9dd;
+      text-decoration: none; }
+    #rosters-list-wrapper .roster-link img {
+      height: 40px; }
+
+#team-page-wrapper {
+  width: 100%;
+  color: white; }
+  #team-page-wrapper h1 {
+    margin-bottom: 20px; }
+  #team-page-wrapper #players-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; }
+    #team-page-wrapper #players-wrapper .player-card {
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column; }
+      @media only screen and (min-device-width: 640px) and (max-device-width: 1780px) {
+        #team-page-wrapper #players-wrapper .player-card {
+          margin-right: 20px; } }
+      @media only screen and (min-device-width: 1780px) {
+        #team-page-wrapper #players-wrapper .player-card {
+          max-width: 320px;
+          margin-right: 20px; } }
+      #team-page-wrapper #players-wrapper .player-card img {
+        width: 260px;
+        align-self: center;
+        margin-top: 20px; }
+      #team-page-wrapper #players-wrapper .player-card .player-card-name {
+        font-size: 1.4em;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: -10px; }
+      #team-page-wrapper #players-wrapper .player-card a {
+        text-align: center;
+        background-color: #62DD8B; }
+        #team-page-wrapper #players-wrapper .player-card a:hover {
+          background-color: #82e3a2; }
+      #team-page-wrapper #players-wrapper .player-card p {
+        padding: 10px;
+        box-sizing: border-box; }
+      #team-page-wrapper #players-wrapper .player-card:last-of-type {
+        margin-bottom: 0; }
+      #team-page-wrapper #players-wrapper .player-card .player-card-role {
+        line-height: 0.6; }
+
 footer {
   position: fixed;
   bottom: 0;
@@ -327,7 +412,8 @@ footer {
       padding: 15px; }
       footer ul li a {
         text-decoration: none;
-        color: #222; }
+        color: #222;
+        transition: all 0.3s; }
         footer ul li a:hover {
           color: white; }
         @media only screen and (min-device-width: 640px) and (max-device-width: 1780px) {

@@ -28,3 +28,19 @@ body{
     }
 
 }
+
+h1{
+    color: $secondary-green;
+}
+
+.default-panel{
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
+    background-color: #333;
+    box-sizing: border-box;
+    padding: 20px;
+    border-top: $green-border;
+    
+    h1,h2{
+        color: $secondary-green;
+    }
+}
