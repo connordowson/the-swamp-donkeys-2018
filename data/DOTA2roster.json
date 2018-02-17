@@ -5,26 +5,35 @@
         "lastname": "Dowson",
         "ingamename": "dows-",
         "role": "Offlane",
-        "nationality": "English",
+        "nationality": "gb-eng",
         "photoURL": "dows"
     },
 
     {
-        "firstname": "Connor",
-        "lastname": "Dowson",
-        "ingamename": "dows-",
-        "role": "Offlane",
-        "nationality": "English",
-        "photoURL": "dows"
+        "firstname": "Chris",
+        "lastname": "Knight",
+        "ingamename": "L3-",
+        "role": "Mid",
+        "nationality": "gb-eng",
+        "photoURL": "L3"
     },
 
     {
-        "firstname": "Connor",
-        "lastname": "Dowson",
-        "ingamename": "dows-",
-        "role": "Offlane",
-        "nationality": "English",
-        "photoURL": "dows"
+        "firstname": "Gareth",
+        "lastname": "Pike",
+        "ingamename": "GaZ-",
+        "role": "Support",
+        "nationality": "gb-wls",
+        "photoURL": "GaZ"
+    },
+
+    {
+        "firstname": "Nathan",
+        "lastname": "Davis",
+        "ingamename": "Mavis-",
+        "role": "Carry",
+        "nationality": "gb-eng",
+        "photoURL": "nopic"
     }
 
 ]

@@ -358,7 +358,8 @@ h1 {
 
 #team-page-wrapper {
   width: 100%;
-  color: white; }
+  color: white;
+  overflow: hidden; }
   #team-page-wrapper h1 {
     margin-bottom: 20px; }
   #team-page-wrapper #players-wrapper {
@@ -367,7 +368,7 @@ h1 {
     flex-wrap: wrap; }
     #team-page-wrapper #players-wrapper .player-card {
       width: 100%;
-      max-width: 700px;
+      max-width: 400px;
       display: flex;
       flex-direction: column; }
       @media only screen and (min-device-width: 640px) and (max-device-width: 1780px) {
@@ -378,14 +379,22 @@ h1 {
           max-width: 320px;
           margin-right: 20px; } }
       #team-page-wrapper #players-wrapper .player-card img {
-        width: 260px;
         align-self: center;
         margin-top: 20px; }
+      @media only screen and (max-device-width: 640px) {
+        #team-page-wrapper #players-wrapper .player-card .dab {
+          width: 100vw;
+          padding-top: 60px; } }
+      #team-page-wrapper #players-wrapper .player-card .player-card-info {
+        display: flex;
+        align-items: center; }
+      #team-page-wrapper #players-wrapper .player-card .player-card-flag {
+        height: 40px;
+        padding: 10px;
+        margin: auto 0; }
       #team-page-wrapper #players-wrapper .player-card .player-card-name {
-        font-size: 1.4em;
-        font-weight: 700;
-        line-height: 1.6;
-        margin-bottom: -10px; }
+        font-size: 1.1em;
+        font-weight: 700; }
       #team-page-wrapper #players-wrapper .player-card a {
         text-align: center;
         background-color: #62DD8B; }
@@ -396,8 +405,6 @@ h1 {
         box-sizing: border-box; }
       #team-page-wrapper #players-wrapper .player-card:last-of-type {
         margin-bottom: 0; }
-      #team-page-wrapper #players-wrapper .player-card .player-card-role {
-        line-height: 0.6; }
 
 footer {
   position: fixed;

@@ -1,7 +1,7 @@
 #team-page-wrapper{
     width: 100%;
     color: white;
-
+    overflow: hidden;
 
     h1{
         margin-bottom: 20px;
@@ -14,7 +14,7 @@
 
         .player-card{
             width: 100%;
-            max-width: 700px;
+            max-width: 400px;
             display: flex;
             flex-direction: column;
 
@@ -28,17 +28,34 @@
             }
 
             img{
-                width: 260px;
                 align-self: center;
                 margin-top: 20px;
             }
-        
+
+            .dab{
+
+                @include mobile{
+                    width: 100vw;
+                    padding-top: 60px;
+                }
+
+            }
+
+            .player-card-info{
+                display: flex;
+                align-items: center;
+            }
+
+            .player-card-flag{
+                height: 40px;
+                padding: 10px;
+                margin: auto 0;
     
+            }
+        
             .player-card-name{
-                font-size: 1.4em;
+                font-size: 1.1em;
                 font-weight: 700;
-                line-height: 1.6;
-                margin-bottom: -10px;
             }
 
             a{
@@ -60,8 +77,8 @@
             }
 
             .player-card-role{
-                line-height: 0.6;
             }
+
     
         }
 

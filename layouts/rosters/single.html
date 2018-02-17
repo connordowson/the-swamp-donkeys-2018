@@ -17,35 +17,32 @@
 
         <div class="main-wrapper">
    
-           <div id="team-page-wrapper" class="default-panel">
+           <div id="team-page-wrapper">
    
-               <h1>{{.Title}}</h1>
+               <h1 class="default-panel">{{.Title}}</h1>
 
                <div id="players-wrapper">
 
-                {{ $var = ( print .Title + "roster" ) }}
+                {{ $var := .Params.rosterdata }}
    
                 {{.Content}}
 
-                    {{ range .Site.Data.CSGOroster }}
+                    {{ range (index .Site.Data $var) }}
 
                     <div class="player-card">
 
-                        <img src="{{.Site.BaseURL}}/assets/players/{{ .photoURL }}.png" alt="" />
+                        <img src="{{.Site.BaseURL}}/assets/players/{{ .photoURL }}.png" id="{{ .ingamename }}" alt="" />
 
-                        <a href="/{{ .ingamename }}">
+                        <a class="player-card-info" href="{{ .ingamename }}">
 
-                            <h1> {{ $var }} </h1>
-                            
+                            <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.9.0/flags/4x3/{{ .nationality }}.svg" class="player-card-flag" />
+
                             <p class="player-card-name" > {{ .firstname }} "{{ .ingamename }}" {{ .lastname }} </p> 
                             
                             <p class="player-card-role"> {{ .role }}  </p>
 
                         
                         </a>
-
-        
-                        <!-- <a class="game-logo"> <img src="/assets/logos/{{ .team }}.svg"/> </a> -->
                                 
                     </div>
 
@@ -54,6 +51,67 @@
             </div>
    
            </div>
+
+           <script>
+
+            let chrisImg = document.getElementById("L3-");
+
+            let counter = 0;
+           
+            chrisImg.onclick = function() {chrisDabs()};
+
+            var word = "dab";
+
+            var input = "";
+
+            document.body.addEventListener('keypress',function(ev){
+
+                input += String.fromCharCode(ev.keyCode);
+
+                console.log(input);
+
+                if(input == word){
+
+                    console.log(input);
+                    chrisDabs();
+                    input = "";
+
+                }
+
+            });
+
+            function chrisDabs(){
+
+                
+
+                setTimeout(function(){
+
+                    chrisImg.classList.toggle("dab");
+                    chrisImg.src="/assets/players/chrisdabright.png";
+
+                    setTimeout(function(){
+
+                        chrisImg.src="/assets/players/chrisdableft.png";
+
+                    }, 300);
+
+                        setTimeout(function(){
+
+                            chrisImg.classList.toggle("dab");
+                            chrisImg.src="/assets/players/L3.png";
+
+                        }, 600);
+
+                }, 900);
+
+                
+
+
+
+                
+            }
+           
+            </script>
    
        </div>
    
