@@ -1,7 +1,7 @@
  #news-wrapper{
 
     @include tablet{
-        max-width: 80%;
+        max-width: 700px;
     }
 
     @include desktop{
@@ -56,27 +56,10 @@
 
         }
 
-        .home-news-date{
-            font-weight: 300;
-            color: #777;
-            font-style: italic;
-        }
-
         p{
             text-overflow: ellipsis;
             color: $off-white;
             font-weight: 300;
-        }
-
-        #read-more{
-            color: $main-green;
-            font-weight: 700;
-
-            &:hover{
-
-                color: $main-green-hover;
-
-            }
         }
 
     }

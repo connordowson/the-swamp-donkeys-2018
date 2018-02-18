@@ -1,31 +1,54 @@
 <html>
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <link rel="stylesheet" href="/css/main.css">
-     <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto:300,400" rel="stylesheet">
-     <title> {{.Title}} </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="theme-color" content="#62DD8B">
+        {{ partial "meta_nonposts.html" . }}
+        <script src="/js/twitter_feed.js"></script>
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Muli:300,400,700|Montserrat:300,400,500,700" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <title> {{.Title}} - The Swamp Donkeys </title>
 </head>
 <body>
     {{ partial "navbar" }}
 
-     {{.Content}}
 
-     {{ range .Pages }}
+    {{.Content}}
 
-          <div style="border: 1px solid black; margin:10px; padding:10px; ">
-               <div style="font-size:20px;">
-                    <a href="{{.URL}}">{{.Title}}</a>
+    <div id="list-wrapper" class="main-wrapper">
+
+    <h1 class="default-panel"> News </h1>
+
+    {{ range .Pages }}
+
+
+            <div class="default-panel news-list-link">
+
+               <div>
+                    <h2> <a href="{{.URL}}"> {{.Title}} </a> </h2>
                </div>
-               <div style="color:grey; font-size:16px;">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
-               <div style="color:grey; font-size:16px;">{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-               <div style="color:grey; font-size:16px;">{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-               <div style="color:grey; font-size:16px;">{{ if .Params.moods }}<strong>Moods:</strong> {{range .Params.moods}}<a href="{{ "/moods/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
 
-               <p style="font-size:18px;">{{.Summary}}</p>
-          </div>
+               <div class="post-date list-post-date">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
+              
+               <p>{{.Summary}}</p>
+
+               <a class="read-more" href="{{ .URL }}"> Read More </a>
+
+            </div>
+
+
      {{ end }}
+
+    </div>
+
      {{ partial "footer" . }}
+
 </body>
+
+{{ template "_internal/google_analytics.html" . }}
+
 </html>

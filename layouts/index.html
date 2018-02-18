@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#62DD8B">
+    {{ partial "meta_nonposts.html" . }}
     <script src="/js/twitter_feed.js"></script>
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Muli:300,400,700|Montserrat:300,400,500,700" rel="stylesheet">
@@ -36,7 +37,7 @@
                     <h2> <a href="{{ .URL }}">{{.Title}} </a> </h2>
                 </div>
 
-                <a class="home-news-date"> {{ dateFormat "Monday, Jan 2, 2006" .Date }} </a>
+                <a class="post-date"> {{ dateFormat "Monday, Jan 2, 2006" .Date }} </a>
 
                 <div> {{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
                 <div> {{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
@@ -45,7 +46,7 @@
                 <p>{{ slicestr .Summary 0 130 }}...</p>
 
 
-                <a id="read-more" href="{{ .URL }}"> Read More </a>
+                <a class="read-more" href="{{ .URL }}"> Read More </a>
 
             </div>
             
@@ -153,7 +154,6 @@
     </div>
 
     {{ template "_internal/google_analytics.html" . }}
-
 
 </body>
 </html>

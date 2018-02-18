@@ -29,6 +29,10 @@
         margin-bottom: 10px;
         border-left: $green-border;
 
+        &:hover{
+            box-shadow: $shadow;
+        }
+
         &:hover h2{
             color: $main-green;
         }

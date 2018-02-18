@@ -1,7 +1,6 @@
 #team-page-wrapper{
     width: 100%;
     color: white;
-    overflow: hidden;
 
     h1{
         margin-bottom: 20px;
@@ -10,7 +9,9 @@
     #players-wrapper{
         display: flex;
         align-items: center;
+        justify-content: space-around;
         flex-wrap: wrap;
+        margin-bottom: 60px;
 
         .player-card{
             width: 100%;
@@ -44,6 +45,8 @@
             .player-card-info{
                 display: flex;
                 align-items: center;
+                box-shadow: $shadow;
+
             }
 
             .player-card-flag{
@@ -75,10 +78,6 @@
             &:last-of-type{
                 margin-bottom: 0;
             }
-
-            .player-card-role{
-            }
-
     
         }
 

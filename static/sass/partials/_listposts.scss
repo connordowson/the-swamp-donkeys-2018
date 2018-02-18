@@ -1,0 +1,44 @@
+#list-wrapper{
+    width: 100%;
+
+    h1{
+        margin-bottom: 20px;
+    }
+
+    @include tablet{
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    @include desktop{
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .news-list-link{
+        padding: 10px;
+
+        *{
+            margin: 5px 0;
+        }
+
+        margin-bottom: 20px;
+
+        h2{
+            a{
+                color: $main-green;
+
+                &:hover{
+                    color: $main-green-hover;
+                }
+
+            }
+        }
+
+        p{
+            color: $off-white;
+            font-weight: 300;
+        }
+    }
+
+}

@@ -41,5 +41,23 @@
         color: $off-white;
     }
 
+    ul{
+        list-style-position: inside;
+
+        li{
+
+            color: $off-white;
+
+        }
+
+        img{
+            height: 20px;
+        }
+
+    }
+
+    .tags{
+        color:$off-white;
+    }
 
 }

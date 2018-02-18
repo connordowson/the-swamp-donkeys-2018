@@ -1,0 +1,22 @@
+{{ if $.Params.headerimage }}
+
+    <meta property="og:image" content="{{ .Params.headerimage | absURL }}" />
+
+    <meta property="og:title" content="{{ $.Title }}" />
+    <meta property="og:site_name" content="www.theswampdonkeys.com" />
+    <meta property="og:url" content="{{ $.Permalink }}" />
+
+    <meta property="og:description" content="{{ with $.Description }}{{ . }}{{ else }}{{if $.IsPage}}{{ $.Summary }}{{ else }}{{ with $.Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+    <meta name="description" content="{{ with $.Description }}{{ . }}{{ else }}{{if $.IsPage}}{{ $.Summary }}{{ else }}{{ with $.Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+
+    {{ else }}
+
+    <meta property="og:title" content="{{ $.Title }}" />
+    <meta property="og:url" content="{{ $.Permalink }}" />
+    <meta property="og:site_name" content="www.theswampdonkeys.com" />
+
+    <meta property="og:description" content="{{ with $.Description }}{{ . }}{{ else }}{{if $.IsPage}}{{ $.Summary }}{{ else }}{{ with $.Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+    <meta name="description" content="{{ with $.Description }}{{ . }}{{ else }}{{if $.IsPage}}{{ $.Summary }}{{ else }}{{ with $.Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+
+
+{{ end }}

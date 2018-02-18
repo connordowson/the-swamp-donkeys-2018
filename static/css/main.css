@@ -151,9 +151,20 @@ h1 {
   .default-panel h1, .default-panel h2 {
     color: #d2f9dd; }
 
+.post-date {
+  font-weight: 300;
+  color: #777;
+  font-style: italic; }
+
+.read-more {
+  color: #62DD8B;
+  font-weight: 700; }
+  .read-more:hover {
+    color: #82e3a2; }
+
 @media only screen and (min-device-width: 640px) and (max-device-width: 1780px) {
   #news-wrapper {
-    max-width: 80%; } }
+    max-width: 700px; } }
 @media only screen and (min-device-width: 1780px) {
   #news-wrapper {
     min-width: 500px;
@@ -180,19 +191,10 @@ h1 {
     font-size: 1.2em; }
     #news-wrapper #home-main-news .home-news-title a:hover {
       color: #82e3a2; }
-  #news-wrapper #home-main-news .home-news-date {
-    font-weight: 300;
-    color: #777;
-    font-style: italic; }
   #news-wrapper #home-main-news p {
     text-overflow: ellipsis;
     color: #F5F5F5;
     font-weight: 300; }
-  #news-wrapper #home-main-news #read-more {
-    color: #62DD8B;
-    font-weight: 700; }
-    #news-wrapper #home-main-news #read-more:hover {
-      color: #82e3a2; }
 #news-wrapper #home-secondary-news {
   border-top: 6px solid #62DD8B;
   margin-bottom: 20px; }
@@ -325,6 +327,39 @@ h1 {
     margin: 0 auto; }
   #single-post-wrapper p {
     color: #F5F5F5; }
+  #single-post-wrapper ul {
+    list-style-position: inside; }
+    #single-post-wrapper ul li {
+      color: #F5F5F5; }
+    #single-post-wrapper ul img {
+      height: 20px; }
+  #single-post-wrapper .tags {
+    color: #F5F5F5; }
+
+#list-wrapper {
+  width: 100%; }
+  #list-wrapper h1 {
+    margin-bottom: 20px; }
+  @media only screen and (min-device-width: 640px) and (max-device-width: 1780px) {
+    #list-wrapper {
+      width: 500px;
+      margin: 0 auto; } }
+  @media only screen and (min-device-width: 1780px) {
+    #list-wrapper {
+      width: 800px;
+      margin: 0 auto; } }
+  #list-wrapper .news-list-link {
+    padding: 10px;
+    margin-bottom: 20px; }
+    #list-wrapper .news-list-link * {
+      margin: 5px 0; }
+    #list-wrapper .news-list-link h2 a {
+      color: #62DD8B; }
+      #list-wrapper .news-list-link h2 a:hover {
+        color: #82e3a2; }
+    #list-wrapper .news-list-link p {
+      color: #F5F5F5;
+      font-weight: 300; }
 
 #rosters-list-wrapper {
   width: 100%;
@@ -348,6 +383,8 @@ h1 {
     background-size: 400px;
     margin-bottom: 10px;
     border-left: 6px solid #62DD8B; }
+    #rosters-list-wrapper .roster-link:hover {
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5); }
     #rosters-list-wrapper .roster-link:hover h2 {
       color: #62DD8B; }
     #rosters-list-wrapper .roster-link h2 {
@@ -358,14 +395,15 @@ h1 {
 
 #team-page-wrapper {
   width: 100%;
-  color: white;
-  overflow: hidden; }
+  color: white; }
   #team-page-wrapper h1 {
     margin-bottom: 20px; }
   #team-page-wrapper #players-wrapper {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; }
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 60px; }
     #team-page-wrapper #players-wrapper .player-card {
       width: 100%;
       max-width: 400px;
@@ -387,7 +425,8 @@ h1 {
           padding-top: 60px; } }
       #team-page-wrapper #players-wrapper .player-card .player-card-info {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5); }
       #team-page-wrapper #players-wrapper .player-card .player-card-flag {
         height: 40px;
         padding: 10px;

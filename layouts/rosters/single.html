@@ -4,12 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#62DD8B">
+    {{ partial "meta_nonposts.html" . }}
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Muli:300,400,700|Montserrat:300,400,500,700" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-     <title> {{ .Title }} team - The Swamp Donkeys </title>
+     <title>  {{ range (index .Site.Data $var) }}{{ .Title }} team - The Swamp Donkeys </title>
 </head>
 <body>
     
@@ -35,12 +36,11 @@
 
                         <a class="player-card-info" href="{{ .ingamename }}">
 
-                            <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.9.0/flags/4x3/{{ .nationality }}.svg" class="player-card-flag" />
+                            <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.9.0/flags/1x1/{{ .nationality }}.svg" class="player-card-flag" />
 
                             <p class="player-card-name" > {{ .firstname }} "{{ .ingamename }}" {{ .lastname }} </p> 
                             
                             <p class="player-card-role"> {{ .role }}  </p>
-
                         
                         </a>
                                 
@@ -82,7 +82,6 @@
 
             function chrisDabs(){
 
-                
 
                 setTimeout(function(){
 
@@ -103,11 +102,6 @@
                         }, 600);
 
                 }, 900);
-
-                
-
-
-
                 
             }
            
@@ -118,4 +112,7 @@
         {{ partial "footer" . }}
      
 </body>
+
+{{ template "_internal/google_analytics.html" . }}
+
 </html>
