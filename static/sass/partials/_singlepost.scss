@@ -1,16 +1,17 @@
 #single-post-wrapper{
     width: 100%;
-    padding-bottom: 40px;
 
     @include tablet{
         width: 50%;
         margin: 0 auto;
+        padding-bottom: 40px;
     }
-
 
     @include desktop{
         width: 800px;
         margin: 0 auto;
+        padding-bottom: 40px;
+
     }
 
     *{
@@ -56,8 +57,16 @@
 
     }
 
-    .tags{
-        color:$off-white;
+    #comments-heading{
+        margin-top: 40px;
+        color: $main-green;
+    }
+
+    #disqus_thread{
+        width: 100%;
+        box-sizing: border-box;
+        font-family: $text-font;
+
     }
 
 }

@@ -6,7 +6,7 @@ headerimage: "/assets/donkey.jpg"
 ---
 
 
-{{< figure src="/assets/donkey.jpg" title="A Donkey" >}}
+{{< figure src="/assets/donkey.jpg">}}
 
 The Swamp Donkeys are proud to announce our new CS:GO roster. We have worked day and night to secure the best talent the UK has to offer. The roster is as follows.
 

@@ -1,12 +1,12 @@
 ---
 title: "aazaa123 attributes Major MVP award to new keyboard"
-date: 2018-02-06T22:48:54Z
+date: 2018-02-02T22:48:54Z
 draft: false
 headerimage: "https://assets.pcmag.com/media/images/430310-das-keyboard-prime-13.jpg"
 tags: "CS:GO"
 ---
 
-{{< figure src="https://assets.pcmag.com/media/images/430310-das-keyboard-prime-13.jpg" title="The new keyboard" >}}
+{{< figure src="https://assets.pcmag.com/media/images/430310-das-keyboard-prime-13.jpg" >}}
 
 Torquay Major champion and MVP Aaron "aazaa123" Hardie has revealed his success in the tournament was down to the purchase of a new keyboard. Previously Aaron had been using a rubber dome keyboard, which had a broken "A" key, but decided to make the switch to a new mechanical keyboard.
 

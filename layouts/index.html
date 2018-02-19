@@ -31,7 +31,7 @@
             <div id="home-main-news">
 
 
-                <img {{ with .Params.imageurl }} src="/assets/{{ . }}" {{ end }} />
+                <img {{ with .Params.headerimage }} src="{{ . }}" {{ end }} />
 
                 <div class="home-news-title">
                     <h2> <a href="{{ .URL }}">{{.Title}} </a> </h2>

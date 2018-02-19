@@ -5,3 +5,4 @@ staticDir = ["static"]
 ignoreFiles = ["\\.scss$", "\\.bat$", "\\.sass$", "sass/.*"]
 uglyurls = false
 googleAnalytics = "UA-91862758-1"
+disqusShortname = "theswampdonkeys"

@@ -1,6 +1,6 @@
 nav{
     width: 100%;
-    color: white;
+    color: $off-white;
     background-color: $main-green;
     display: flex;
     justify-content: space-between;
@@ -16,7 +16,7 @@ nav{
         a{
             font-family: $title-font;
             font-size: 20pt;
-            color: white;
+            color: $off-white;
             margin-left: 55px;
             min-width: 215px;
         }
@@ -97,14 +97,14 @@ nav{
             position: relative;
 
             a{
-                color: white;
-                font-size: 15pt;
+                color: $off-white;
+                font-size: 1.3em;
                 text-decoration: none;
 
                 &:after{
                     content: "";
-                    background-color: white;
-                    height: 5px;
+                    background-color: $off-white;
+                    height: 6px;
                     width: 0;
                     position: absolute;
                     bottom: 0;
@@ -141,7 +141,7 @@ nav{
         justify-content: center;
 
         a{
-            color: white;
+            color:$off-white;
             font-family: $text-font;
             text-decoration: none;
             font-size: 1.6em;

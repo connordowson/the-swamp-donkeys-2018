@@ -8,7 +8,7 @@ a {
 
 nav {
   width: 100%;
-  color: white;
+  color: #F5F5F5;
   background-color: #62DD8B;
   display: flex;
   justify-content: space-between;
@@ -22,7 +22,7 @@ nav {
     nav #nav-title a {
       font-family: "Lobster", cursive;
       font-size: 20pt;
-      color: white;
+      color: #F5F5F5;
       margin-left: 55px;
       min-width: 215px; }
     nav #nav-title img {
@@ -76,13 +76,13 @@ nav {
       margin-right: 20px;
       position: relative; }
       nav #desktop-menu li a {
-        color: white;
-        font-size: 15pt;
+        color: #F5F5F5;
+        font-size: 1.3em;
         text-decoration: none; }
         nav #desktop-menu li a:after {
           content: "";
-          background-color: white;
-          height: 5px;
+          background-color: #F5F5F5;
+          height: 6px;
           width: 0;
           position: absolute;
           bottom: 0;
@@ -106,7 +106,7 @@ nav {
     display: flex;
     justify-content: center; }
     #mobile-menu li a {
-      color: white;
+      color: #F5F5F5;
       font-family: "Montserrat", sans-serif;
       text-decoration: none;
       font-size: 1.6em;
@@ -301,16 +301,17 @@ h1 {
     content: ""; }
 
 #single-post-wrapper {
-  width: 100%;
-  padding-bottom: 40px; }
+  width: 100%; }
   @media only screen and (min-device-width: 640px) and (max-device-width: 1780px) {
     #single-post-wrapper {
       width: 50%;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      padding-bottom: 40px; } }
   @media only screen and (min-device-width: 1780px) {
     #single-post-wrapper {
       width: 800px;
-      margin: 0 auto; } }
+      margin: 0 auto;
+      padding-bottom: 40px; } }
   #single-post-wrapper * {
     margin-bottom: 10px; }
   #single-post-wrapper h1 {
@@ -333,8 +334,13 @@ h1 {
       color: #F5F5F5; }
     #single-post-wrapper ul img {
       height: 20px; }
-  #single-post-wrapper .tags {
-    color: #F5F5F5; }
+  #single-post-wrapper #comments-heading {
+    margin-top: 40px;
+    color: #62DD8B; }
+  #single-post-wrapper #disqus_thread {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif; }
 
 #list-wrapper {
   width: 100%; }
