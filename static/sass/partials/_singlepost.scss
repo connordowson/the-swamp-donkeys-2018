@@ -69,4 +69,40 @@
 
     }
 
+    #social-media-wrapper{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+
+        .social-share{
+            padding: 5px;
+            margin-left: 10px;
+            display: flex;
+            align-items: baseline;
+
+            svg{
+                margin: 0 10px 0 0;
+                align-self: center;
+            }
+
+        }
+    
+        #facebook-share{
+            background-color: #3b5998;
+
+            &:hover{
+                background-color: #5a7abf;
+            }
+        }
+    
+        #twitter-share{
+            background-color: #00aced;
+
+            &:hover{
+                background-color: #33c9ff;
+            }
+        }
+    
+    }
+
 }

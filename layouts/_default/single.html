@@ -30,8 +30,18 @@
 
                 <div> {{.Content}} </div>
 
+                <div id="social-media-wrapper">
+
+                    <!-- Twitter share button -->
+                    <a id="twitter-share" class="social-share" href='http://twitter.com/share?url={{ .Permalink  }}&text={{ .Title }}&via=TheSwampDonkeysEsports' class='button'> <i class="fab fa-twitter"></i> Tweet </a>
+
+                    <a id="facebook-share" class="social-share"href="http://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"> <i class="fab fa-facebook"></i> Facebook </a>
+
+                </div>
+
                 <h2 id="comments-heading"> Comments </h2>
 
+                <!-- Disqus partial for comments -->
                 {{ partial "disqus.html" . }}
 
             </div>

@@ -341,6 +341,26 @@ h1 {
     width: 100%;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif; }
+  #single-post-wrapper #social-media-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px; }
+    #single-post-wrapper #social-media-wrapper .social-share {
+      padding: 5px;
+      margin-left: 10px;
+      display: flex;
+      align-items: baseline; }
+      #single-post-wrapper #social-media-wrapper .social-share svg {
+        margin: 0 10px 0 0;
+        align-self: center; }
+    #single-post-wrapper #social-media-wrapper #facebook-share {
+      background-color: #3b5998; }
+      #single-post-wrapper #social-media-wrapper #facebook-share:hover {
+        background-color: #5a7abf; }
+    #single-post-wrapper #social-media-wrapper #twitter-share {
+      background-color: #00aced; }
+      #single-post-wrapper #social-media-wrapper #twitter-share:hover {
+        background-color: #33c9ff; }
 
 #list-wrapper {
   width: 100%; }
